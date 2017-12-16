@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA2902231FE179AA004F76C1 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2902221FE179AA004F76C1 /* Grid.swift */; };
+		EA2902251FE180BE004F76C1 /* Programming Project 3: Graphical Set.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EA2902241FE180BE004F76C1 /* Programming Project 3: Graphical Set.pdf */; };
+		EA2902271FE19CCE004F76C1 /* ViewForSetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2902261FE19CCE004F76C1 /* ViewForSetCard.swift */; };
+		EA29022D1FE1B061004F76C1 /* ViewForSetCard measures.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EA29022C1FE1B061004F76C1 /* ViewForSetCard measures.pdf */; };
+		EA302CC81FC3B86700CDE0C2 /* SetCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA302CC71FC3B86700CDE0C2 /* SetCardButton.swift */; };
+		EA352AF81FC33D620049BECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA352AF71FC33D620049BECC /* AppDelegate.swift */; };
+		EA352AFA1FC33D620049BECC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA352AF91FC33D620049BECC /* ViewController.swift */; };
+		EA352AFD1FC33D620049BECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA352AFB1FC33D620049BECC /* Main.storyboard */; };
+		EA352AFF1FC33D620049BECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA352AFE1FC33D620049BECC /* Assets.xcassets */; };
+		EA352B021FC33D620049BECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA352B001FC33D620049BECC /* LaunchScreen.storyboard */; };
+		EA352B0F1FC34FEF0049BECC /* CardForGameOfSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA352B0E1FC34FEF0049BECC /* CardForGameOfSet.swift */; };
+		EA352B111FC35A590049BECC /* DeckOfCardsForGameOfSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA352B101FC35A590049BECC /* DeckOfCardsForGameOfSet.swift */; };
+		EA352B131FC37BF30049BECC /* EngineForGameOfSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA352B121FC37BF30049BECC /* EngineForGameOfSet.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EA2902221FE179AA004F76C1 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		EA2902241FE180BE004F76C1 /* Programming Project 3: Graphical Set.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Programming Project 3: Graphical Set.pdf"; sourceTree = "<group>"; };
+		EA2902261FE19CCE004F76C1 /* ViewForSetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForSetCard.swift; sourceTree = "<group>"; };
+		EA29022C1FE1B061004F76C1 /* ViewForSetCard measures.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ViewForSetCard measures.pdf"; sourceTree = "<group>"; };
+		EA302CC71FC3B86700CDE0C2 /* SetCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardButton.swift; sourceTree = "<group>"; };
+		EA352AF41FC33D620049BECC /* Programming_Project03-Graphical_Set.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Programming_Project03-Graphical_Set.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA352AF71FC33D620049BECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA352AF91FC33D620049BECC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA352AFC1FC33D620049BECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA352AFE1FC33D620049BECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA352B011FC33D620049BECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA352B031FC33D620049BECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA352B0E1FC34FEF0049BECC /* CardForGameOfSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardForGameOfSet.swift; sourceTree = "<group>"; };
+		EA352B101FC35A590049BECC /* DeckOfCardsForGameOfSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckOfCardsForGameOfSet.swift; sourceTree = "<group>"; };
+		EA352B121FC37BF30049BECC /* EngineForGameOfSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineForGameOfSet.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA352AF11FC33D620049BECC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA352AEB1FC33D620049BECC = {
+			isa = PBXGroup;
+			children = (
+				EA352AF61FC33D620049BECC /* Programming_Project03-Graphical Set */,
+				EA352AF51FC33D620049BECC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA352AF51FC33D620049BECC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA352AF41FC33D620049BECC /* Programming_Project03-Graphical_Set.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA352AF61FC33D620049BECC /* Programming_Project03-Graphical Set */ = {
+			isa = PBXGroup;
+			children = (
+				EA352AFB1FC33D620049BECC /* Main.storyboard */,
+				EA352AF91FC33D620049BECC /* ViewController.swift */,
+				EA302CC71FC3B86700CDE0C2 /* SetCardButton.swift */,
+				EA2902221FE179AA004F76C1 /* Grid.swift */,
+				EA352B121FC37BF30049BECC /* EngineForGameOfSet.swift */,
+				EA352B101FC35A590049BECC /* DeckOfCardsForGameOfSet.swift */,
+				EA352B0E1FC34FEF0049BECC /* CardForGameOfSet.swift */,
+				EA2902261FE19CCE004F76C1 /* ViewForSetCard.swift */,
+				EA352AFE1FC33D620049BECC /* Assets.xcassets */,
+				EA352B091FC34F3D0049BECC /* Supporting Files */,
+				EA352B031FC33D620049BECC /* Info.plist */,
+			);
+			path = "Programming_Project03-Graphical Set";
+			sourceTree = "<group>";
+		};
+		EA352B091FC34F3D0049BECC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA2902241FE180BE004F76C1 /* Programming Project 3: Graphical Set.pdf */,
+				EA29022C1FE1B061004F76C1 /* ViewForSetCard measures.pdf */,
+				EA352AF71FC33D620049BECC /* AppDelegate.swift */,
+				EA352B001FC33D620049BECC /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA352AF31FC33D620049BECC /* Programming_Project03-Graphical_Set */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA352B061FC33D620049BECC /* Build configuration list for PBXNativeTarget "Programming_Project03-Graphical_Set" */;
+			buildPhases = (
+				EA352AF01FC33D620049BECC /* Sources */,
+				EA352AF11FC33D620049BECC /* Frameworks */,
+				EA352AF21FC33D620049BECC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Programming_Project03-Graphical_Set";
+			productName = "Programming_Project03-Graphical Set";
+			productReference = EA352AF41FC33D620049BECC /* Programming_Project03-Graphical_Set.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA352AEC1FC33D620049BECC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Michel Deiman";
+				TargetAttributes = {
+					EA352AF31FC33D620049BECC = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EA352AEF1FC33D620049BECC /* Build configuration list for PBXProject "Programming_Project03-Graphical_Set" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA352AEB1FC33D620049BECC;
+			productRefGroup = EA352AF51FC33D620049BECC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA352AF31FC33D620049BECC /* Programming_Project03-Graphical_Set */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA352AF21FC33D620049BECC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA352B021FC33D620049BECC /* LaunchScreen.storyboard in Resources */,
+				EA29022D1FE1B061004F76C1 /* ViewForSetCard measures.pdf in Resources */,
+				EA352AFF1FC33D620049BECC /* Assets.xcassets in Resources */,
+				EA2902251FE180BE004F76C1 /* Programming Project 3: Graphical Set.pdf in Resources */,
+				EA352AFD1FC33D620049BECC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA352AF01FC33D620049BECC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA302CC81FC3B86700CDE0C2 /* SetCardButton.swift in Sources */,
+				EA352B131FC37BF30049BECC /* EngineForGameOfSet.swift in Sources */,
+				EA352B0F1FC34FEF0049BECC /* CardForGameOfSet.swift in Sources */,
+				EA352B111FC35A590049BECC /* DeckOfCardsForGameOfSet.swift in Sources */,
+				EA352AFA1FC33D620049BECC /* ViewController.swift in Sources */,
+				EA2902231FE179AA004F76C1 /* Grid.swift in Sources */,
+				EA352AF81FC33D620049BECC /* AppDelegate.swift in Sources */,
+				EA2902271FE19CCE004F76C1 /* ViewForSetCard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA352AFB1FC33D620049BECC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA352AFC1FC33D620049BECC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA352B001FC33D620049BECC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA352B011FC33D620049BECC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA352B041FC33D620049BECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA352B051FC33D620049BECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA352B071FC33D620049BECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 663TR68DHM;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				INFOPLIST_FILE = "Programming_Project03-Graphical Set/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DeimanTechnology.Programming-Project03-Graphical-Set";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA352B081FC33D620049BECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 663TR68DHM;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				INFOPLIST_FILE = "Programming_Project03-Graphical Set/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DeimanTechnology.Programming-Project03-Graphical-Set";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA352AEF1FC33D620049BECC /* Build configuration list for PBXProject "Programming_Project03-Graphical_Set" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA352B041FC33D620049BECC /* Debug */,
+				EA352B051FC33D620049BECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA352B061FC33D620049BECC /* Build configuration list for PBXNativeTarget "Programming_Project03-Graphical_Set" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA352B071FC33D620049BECC /* Debug */,
+				EA352B081FC33D620049BECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA352AEC1FC33D620049BECC /* Project object */;
+}
