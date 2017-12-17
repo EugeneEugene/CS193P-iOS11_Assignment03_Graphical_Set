@@ -23,6 +23,10 @@ struct DeckOfCardsForGameOfSet: CustomStringConvertible {
 		return returnArray
 	}
 	
+	var count: Int {
+		return cards.count
+	}
+	
 	enum validDraws: Int {
 		case three = 3
 		case twelve = 12

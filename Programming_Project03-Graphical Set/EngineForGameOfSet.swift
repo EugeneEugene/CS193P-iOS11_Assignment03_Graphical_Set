@@ -15,9 +15,15 @@ class EngineForGameOfSet: CustomStringConvertible {
 	var cardsTakenFromTable: [CardForGameOfSet] = []
 	
 	func drawCards() -> [CardForGameOfSet]? {
-		let cards = deck.draw(n: .three) ?? []
-		cardsOnTable +=  cards
-		return cards
+		if let cards = deck.draw(n: .three) {
+			cardsOnTable +=  cards
+			return cards
+		}
+		return nil
+	}
+	
+	var deckCount: Int {
+		return deck.count
 	}
 	
 	func ifSetThenRemoveFromTable(cards: [CardForGameOfSet]) -> Bool {

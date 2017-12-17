@@ -8,24 +8,38 @@
 
 import UIKit
 
-class SetCardButton: UIButton {
+class SetCardView : UIView {
 	
-	var cardIndex: Int = 0
-	
-	func initialise () {
+	private func initialise () {
 		layer.borderWidth = LayOutMetricsForCardView.borderWidth
 		layer.borderColor = LayOutMetricsForCardView.borderColor
 		layer.cornerRadius = LayOutMetricsForCardView.cornerRadius
+		self.clipsToBounds = true
 	}
 	
+	override init(frame: CGRect) {
+		super.init(frame: frame)
+		initialise()
+	}
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		initialise()
+	}
+	
+	var cardIndex: Int = 0
 	var card: CardForGameOfSet? {
 		didSet {
 			cardIndex = card != nil ? card!.hashValue : 0
+			stateOfSetCardButton = .unselected
 			setNeedsDisplay()
 		}
 	}
 	
-	let objectSizeToLineWidthRatio: CGFloat = 10
+	override func didMoveToSuperview() {
+		setNeedsLayout()
+	}
+
+	private let objectSizeToLineWidthRatio: CGFloat = 10
 	
 	override func draw(_ rect: CGRect) {
 		if let card = card {
@@ -57,6 +71,7 @@ class SetCardButton: UIButton {
 	enum StateOfSetCardButton {
 		case unselected
 		case selected
+		case hinted
 		case selectedAndMatched
 	}
 	
@@ -64,9 +79,6 @@ class SetCardButton: UIButton {
 		didSet {
 			switch stateOfSetCardButton {
 			case .unselected:
-				if oldValue == .selectedAndMatched {
-					setAttributedTitle(NSAttributedString(), for: .normal)
-				}
 				layer.borderWidth = LayOutMetricsForCardView.borderWidth
 				layer.borderColor = LayOutMetricsForCardView.borderColor
 			case .selected:
@@ -75,19 +87,10 @@ class SetCardButton: UIButton {
 			case .selectedAndMatched:
 				layer.borderWidth = LayOutMetricsForCardView.borderWidthIfMatched
 				layer.borderColor = LayOutMetricsForCardView.borderColorIfMatched
-				cardIndex = 0
+			case .hinted:
+				layer.borderWidth = LayOutMetricsForCardView.borderWidthIfHinted
+				layer.borderColor = LayOutMetricsForCardView.borderColorIfHinted
 			}
 		}
 	}
-	
-	override init(frame: CGRect) {
-		super.init(frame: frame)
-		initialise()
-	}
-	
-	required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
-		initialise()
-	}
-
 }
