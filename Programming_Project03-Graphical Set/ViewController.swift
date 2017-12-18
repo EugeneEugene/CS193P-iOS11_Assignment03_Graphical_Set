@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Programming_Project02-GameOfSet
+//  Programming_Project03-GraphicalSet
 //
-//  Created by Michel Deiman on 20/11/2017.
+//  Created by Michel Deiman on 17/12/2017.
 //  Copyright © 2017 Michel Deiman. All rights reserved.
 //
 
@@ -18,15 +18,15 @@ class ViewController: UIViewController {
 			drawCardsButton.setTitle("none", for: .disabled)
 		}
 	}
-	@IBOutlet weak var hintButton: UIButton! { didSet { layOutFor(button: hintButton) } }
-	@IBOutlet weak var startNewGameButton: UIButton!  { didSet { layOutFor(button: startNewGameButton) } }
-	@IBOutlet weak var scoreLabel: UILabel! { didSet { layOutFor(button: scoreLabel) } }
+	@IBOutlet weak var hintButton: UIButton! { didSet { layOutFor(hintButton) } }
+	@IBOutlet weak var startNewGameButton: UIButton!  { didSet { layOutFor(startNewGameButton) } }
+	@IBOutlet weak var scoreLabel: UILabel! { didSet { layOutFor(scoreLabel) } }
 
-	func layOutFor(button: UIView) {
-		button.layer.borderWidth = LayOutMetricsForCardView.borderWidth
-		button.layer.borderColor = LayOutMetricsForCardView.borderColor
-		button.layer.cornerRadius = LayOutMetricsForCardView.cornerRadius
-		button.clipsToBounds = true
+	func layOutFor(_ view: UIView) {
+		view.layer.borderWidth = LayOutMetricsForCardView.borderWidth
+		view.layer.borderColor = LayOutMetricsForCardView.borderColor
+		view.layer.cornerRadius = LayOutMetricsForCardView.cornerRadius
+		view.clipsToBounds = true
 	}
 	
 	@IBOutlet weak var superViewForCards: UIView! {
@@ -51,9 +51,7 @@ class ViewController: UIViewController {
 		didSet {
 			let cardsOnTable = gameEngine.cardsOnTable
 			hints.cards = gameEngine.hints
-			for index in cardsOnTable.indices {
-				addSetCardView(for: cardsOnTable[index])
-			}
+			cardsOnTable.indices.forEach { addSetCardView(for: cardsOnTable[$0]) }
 		}
 	}
 
@@ -63,7 +61,7 @@ class ViewController: UIViewController {
 		setCardButton.card = card
 		setCardButton.contentMode = .redraw
 		cardButtons.append(setCardButton)
-		setCardButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onCardButton(_:))))
+		setCardButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onCardTapGesture)))
 		superViewForCards.addSubview(setCardButton)
 	}
 	
@@ -108,7 +106,7 @@ class ViewController: UIViewController {
 		}
 	}
 	
-	@objc func onCardButton(_ recognizer: UITapGestureRecognizer) {
+	@objc func onCardTapGesture(_ recognizer: UITapGestureRecognizer) {
 		guard let tappedCard = recognizer.view as? SetCardView else { return }
 		if selectedButtons.count == 3  {
 			if thereIsASet {
@@ -167,6 +165,7 @@ class ViewController: UIViewController {
 	
 	private var timer: Timer?
 	private var _lastHint: [SetCardView]?
+	
 	@IBAction func onHintButton(_ sender: UIButton) {
 		timer?.invalidate()
 		_lastHint?.forEach { $0.stateOfSetCardButton = .unselected }
@@ -174,6 +173,7 @@ class ViewController: UIViewController {
 		let cardButtonsWithSet = buttonsFor(cards: hints.cards[hints.index])
 		cardButtonsWithSet.forEach { $0.stateOfSetCardButton = .hinted  }
 		_lastHint = cardButtonsWithSet
+		
 		hints.index = hints.index < hints.cards.count - 1 ? hints.index + 1 : 0
 		timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) {  timer in
 			cardButtonsWithSet.forEach { [weak self] in
