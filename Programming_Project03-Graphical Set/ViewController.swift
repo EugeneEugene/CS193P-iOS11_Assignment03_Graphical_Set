@@ -14,15 +14,15 @@ class ViewController: UIViewController {
 	
 	@IBOutlet weak var drawCardsButton: UIButton! {
 		didSet {
-			drawCardsButton!.titleLabel?.numberOfLines = 0
 			drawCardsButton.setTitle("none", for: .disabled)
+			layOut(for: drawCardsButton)
 		}
 	}
-	@IBOutlet weak var hintButton: UIButton! { didSet { layOutFor(hintButton) } }
-	@IBOutlet weak var startNewGameButton: UIButton!  { didSet { layOutFor(startNewGameButton) } }
-	@IBOutlet weak var scoreLabel: UILabel! { didSet { layOutFor(scoreLabel) } }
+	@IBOutlet weak var hintButton: UIButton! { didSet { layOut(for: hintButton) } }
+	@IBOutlet weak var startNewGameButton: UIButton!  { didSet { layOut(for: startNewGameButton) } }
+	@IBOutlet weak var scoreLabel: UILabel! { didSet { layOut(for: scoreLabel) } }
 
-	func layOutFor(_ view: UIView) {
+	func layOut(for view: UIView) {
 		view.layer.borderWidth = LayOutMetricsForCardView.borderWidth
 		view.layer.borderColor = LayOutMetricsForCardView.borderColor
 		view.layer.cornerRadius = LayOutMetricsForCardView.cornerRadius
@@ -31,6 +31,7 @@ class ViewController: UIViewController {
 	
 	@IBOutlet weak var superViewForCards: UIView! {
 		didSet {
+			layOut(for: superViewForCards)
 			let swipe = UISwipeGestureRecognizer(target: self, action: #selector(onDrawCardsSwipe(_:)))
 			swipe.direction = [.down]
 			superViewForCards.addGestureRecognizer(swipe)
@@ -136,8 +137,8 @@ class ViewController: UIViewController {
 		if let cards = gameEngine.drawCards() {
 			for index in cards.indices {
 				addSetCardView(for: cards[index])
-				hints.cards = gameEngine.hints
 			}
+			hints.cards = gameEngine.hints
 		} else {
 			drawCardsButton.isEnabled = false
 		}
@@ -175,13 +176,13 @@ class ViewController: UIViewController {
 		_lastHint = cardButtonsWithSet
 		
 		hints.index = hints.index < hints.cards.count - 1 ? hints.index + 1 : 0
-		timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) {  timer in
-			cardButtonsWithSet.forEach { [weak self] in
+		timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { [weak self] timer in
+			cardButtonsWithSet.forEach {
 				if $0.stateOfSetCardButton == .hinted {
 					$0.stateOfSetCardButton = .unselected
-					self?._lastHint = nil
 				}
 			}
+			self?._lastHint = nil
 		}
 	}
 	
