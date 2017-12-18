@@ -35,7 +35,7 @@ struct aspectRatioGrid {
 		return index < cellFrames.count ? cellFrames[index] : nil
 	}
 	
-	struct GridDimensions: Comparable {
+	private struct GridDimensions: Comparable {
 		static func <(lhs: aspectRatioGrid.GridDimensions, rhs: aspectRatioGrid.GridDimensions) -> Bool {
 			return lhs.isCloserToIdeal(aspectRatio: rhs.aspectRatio)
 		}

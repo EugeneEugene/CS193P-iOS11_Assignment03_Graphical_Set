@@ -120,7 +120,7 @@ class ViewController: UIViewController {
 		}
 	}
 	
-	@IBAction func onDrawCardsSwipe(_ recognizer: UISwipeGestureRecognizer) {
+	@objc func onDrawCardsSwipe(_ recognizer: UISwipeGestureRecognizer) {
 		drawCards()
 	}
 	
@@ -170,7 +170,7 @@ class ViewController: UIViewController {
 		timer?.invalidate()
 		_lastHint?.forEach { $0.stateOfSetCardButton = .unselected }
 		selectedButtons.forEach { $0.stateOfSetCardButton = .unselected }
-		let cardButtonsWithSet = buttonsFor(cards: hints.cards[hints.index])
+		let cardButtonsWithSet = buttons(for: hints.cards[hints.index])
 		cardButtonsWithSet.forEach { $0.stateOfSetCardButton = .hinted  }
 		_lastHint = cardButtonsWithSet
 		
@@ -185,7 +185,7 @@ class ViewController: UIViewController {
 		}
 	}
 	
-	private func buttonsFor(cards: [CardForGameOfSet])-> [SetCardView] {
+	private func buttons(for cards: [CardForGameOfSet])-> [SetCardView] {
 		var buttons: [SetCardView] = []
 		for card in cards {
 			if let button = (cardButtons.filter { $0.cardIndex == card.hashValue }).first  {

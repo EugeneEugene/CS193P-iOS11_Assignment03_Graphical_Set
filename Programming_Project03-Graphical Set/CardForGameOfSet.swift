@@ -39,9 +39,7 @@ struct CardForGameOfSet: Equatable, Hashable ,CustomStringConvertible {
 		self.shape = Shapes(rawValue: s)!
 		self.fill = Fills(rawValue: f)!
 	}
-	
 }
-
 
 enum Numbers: Int, CustomStringConvertible  {
 	case one = 1

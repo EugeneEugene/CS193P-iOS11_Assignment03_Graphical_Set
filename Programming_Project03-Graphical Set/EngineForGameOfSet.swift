@@ -71,7 +71,6 @@ class EngineForGameOfSet: CustomStringConvertible {
 		var returnString = ""
 		returnString += "cardsOnTable: \(cardsOnTable.count)\n \(cardsOnTable)"
 		returnString += "\n\ncardsTakenFromTable: \(cardsTakenFromTable.count)\n \(cardsTakenFromTable)"
-//		returnString += "\n\nTest drawCards(): \n \(drawCards()!)"
 		let date = Date()
 		let hints = self.hints
 		returnString += "\n\nHints: \(hints.count)\n \(hints) \n\nIt took hints \(-date.timeIntervalSinceNow) seconds"

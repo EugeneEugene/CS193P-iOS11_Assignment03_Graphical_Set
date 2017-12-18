@@ -90,12 +90,12 @@
                         <constraints>
                             <constraint firstAttribute="top" secondItem="IQc-13-wSd" secondAttribute="top" id="BKJ-gL-hSL"/>
                             <constraint firstItem="IQc-13-wSd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NzA-yW-wjL"/>
-                            <constraint firstItem="IQc-13-wSd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="PNk-4V-Yy2"/>
+                            <constraint firstItem="IQc-13-wSd" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="PNk-4V-Yy2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ros-Ta-a8m" secondAttribute="bottom" id="gZh-4h-CYL"/>
                             <constraint firstItem="ros-Ta-a8m" firstAttribute="top" secondItem="IQc-13-wSd" secondAttribute="bottom" constant="5" id="hI3-q5-clK"/>
                             <constraint firstItem="IQc-13-wSd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hkX-MO-RLM"/>
                             <constraint firstItem="ros-Ta-a8m" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="leV-Gb-S4D"/>
-                            <constraint firstItem="ros-Ta-a8m" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="pjE-pX-zkQ"/>
+                            <constraint firstItem="ros-Ta-a8m" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="pjE-pX-zkQ"/>
                             <constraint firstItem="ros-Ta-a8m" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="s00-1f-IiR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

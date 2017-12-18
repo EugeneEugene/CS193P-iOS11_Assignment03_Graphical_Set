@@ -10,20 +10,21 @@ import UIKit
 
 class SetCardView : UIView {
 	
-	private func initialise () {
-		layer.borderWidth = LayOutMetricsForCardView.borderWidth
-		layer.borderColor = LayOutMetricsForCardView.borderColor
-		layer.cornerRadius = LayOutMetricsForCardView.cornerRadius
-		self.clipsToBounds = true
-	}
-	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		initialise()
+		self.clipsToBounds = true
+		setBasicLayoutForBorder()
 	}
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		initialise()
+		self.clipsToBounds = true
+		setBasicLayoutForBorder()
+	}
+	
+	private func setBasicLayoutForBorder () {
+		layer.borderWidth = LayOutMetricsForCardView.borderWidth
+		layer.borderColor = LayOutMetricsForCardView.borderColor
+		layer.cornerRadius = LayOutMetricsForCardView.cornerRadius
 	}
 	
 	var cardIndex: Int = 0
