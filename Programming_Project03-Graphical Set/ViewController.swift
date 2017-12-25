@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, LayoutViews {
 
 	var cardButtons: [SetCardView] = []
 	
@@ -29,24 +29,25 @@ class ViewController: UIViewController {
 		view.clipsToBounds = true
 	}
 	
-	@IBOutlet weak var superViewForCards: UIView! {
+	@IBOutlet weak var mainView: MainView! {
 		didSet {
-			layOut(for: superViewForCards)
+			layOut(for: mainView)
 			let swipe = UISwipeGestureRecognizer(target: self, action: #selector(onDrawCardsSwipe(_:)))
 			swipe.direction = [.down]
-			superViewForCards.addGestureRecognizer(swipe)
-			superViewForCards.addGestureRecognizer(UIRotationGestureRecognizer(target: self, action: #selector(onReShuffleCards(_:))))
+			mainView.addGestureRecognizer(swipe)
+			mainView.addGestureRecognizer(UIRotationGestureRecognizer(target: self, action: #selector(onReShuffleCards(_:))))
+			mainView.delegate = self
 		}
 	}
 	
-	override func viewDidLayoutSubviews() {
-		super.viewDidLayoutSubviews()
-		let grid = aspectRatioGrid(for: superViewForCards.bounds, withNoOfFrames: gameEngine.cardsOnTable.count)
+	func updateViewFromModel() {
+		let grid = aspectRatioGrid(for: mainView.bounds, withNoOfFrames: gameEngine.cardsOnTable.count)
 		for index in cardButtons.indices {
 			let insetXY = (grid[index]?.height ?? 400)/100
 			cardButtons[index].frame = grid[index]?.insetBy(dx: insetXY, dy: insetXY) ?? CGRect.zero
 		}
 	}
+	
 	
 	private var gameEngine: EngineForGameOfSet! {
 		didSet {
@@ -63,7 +64,7 @@ class ViewController: UIViewController {
 		setCardButton.contentMode = .redraw
 		cardButtons.append(setCardButton)
 		setCardButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onCardTapGesture)))
-		superViewForCards.addSubview(setCardButton)
+		mainView.addSubview(setCardButton)
 	}
 	
 	@objc func onReShuffleCards(_ recognizer : UIRotationGestureRecognizer) {

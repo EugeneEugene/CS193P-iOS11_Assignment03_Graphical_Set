@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="IQc-13-wSd">
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="IQc-13-wSd" customClass="MainView" customModule="Programming_Project03_Graphical_Set" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="403"/>
                                 <color key="backgroundColor" cyan="0.03222370520234108" magenta="0.037519440054893494" yellow="0.3644370436668396" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <gestureRecognizers/>
@@ -103,9 +103,9 @@
                     <connections>
                         <outlet property="drawCardsButton" destination="SNA-9C-c65" id="y7U-LU-R5N"/>
                         <outlet property="hintButton" destination="o7L-Lw-raU" id="WHm-7a-2qL"/>
+                        <outlet property="mainView" destination="IQc-13-wSd" id="46X-8N-F0m"/>
                         <outlet property="scoreLabel" destination="J5b-c2-HZv" id="iN3-9V-Qu5"/>
                         <outlet property="startNewGameButton" destination="1AB-Pr-lB3" id="mHy-L9-Dmj"/>
-                        <outlet property="superViewForCards" destination="IQc-13-wSd" id="46X-8N-F0m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

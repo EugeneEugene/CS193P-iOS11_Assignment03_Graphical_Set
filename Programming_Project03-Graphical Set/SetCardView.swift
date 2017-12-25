@@ -37,6 +37,7 @@ class SetCardView : UIView {
 	}
 	
 	override func didMoveToSuperview() {
+		super.didMoveToSuperview()
 		setNeedsLayout()
 	}
 

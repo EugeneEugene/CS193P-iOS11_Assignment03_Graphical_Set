@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA25AB4E1FF1991300743985 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA25AB4D1FF1991300743985 /* MainView.swift */; };
 		EA2902251FE180BE004F76C1 /* Programming Project 3: Graphical Set.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EA2902241FE180BE004F76C1 /* Programming Project 3: Graphical Set.pdf */; };
 		EA2902271FE19CCE004F76C1 /* ViewForSetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2902261FE19CCE004F76C1 /* ViewForSetCard.swift */; };
 		EA29022D1FE1B061004F76C1 /* ViewForSetCard measures.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EA29022C1FE1B061004F76C1 /* ViewForSetCard measures.pdf */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA25AB4D1FF1991300743985 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EA2902241FE180BE004F76C1 /* Programming Project 3: Graphical Set.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Programming Project 3: Graphical Set.pdf"; sourceTree = "<group>"; };
 		EA2902261FE19CCE004F76C1 /* ViewForSetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForSetCard.swift; sourceTree = "<group>"; };
 		EA29022C1FE1B061004F76C1 /* ViewForSetCard measures.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ViewForSetCard measures.pdf"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				EA352AFB1FC33D620049BECC /* Main.storyboard */,
 				EA352AF91FC33D620049BECC /* ViewController.swift */,
 				EA302CC71FC3B86700CDE0C2 /* SetCardView.swift */,
+				EA25AB4D1FF1991300743985 /* MainView.swift */,
 				EA7A2E331FE576500035DC00 /* aspectRatioGrid.swift */,
 				EA352B121FC37BF30049BECC /* EngineForGameOfSet.swift */,
 				EA352B101FC35A590049BECC /* DeckOfCardsForGameOfSet.swift */,
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA302CC81FC3B86700CDE0C2 /* SetCardView.swift in Sources */,
+				EA25AB4E1FF1991300743985 /* MainView.swift in Sources */,
 				EA352B131FC37BF30049BECC /* EngineForGameOfSet.swift in Sources */,
 				EA352B0F1FC34FEF0049BECC /* CardForGameOfSet.swift in Sources */,
 				EA352B111FC35A590049BECC /* DeckOfCardsForGameOfSet.swift in Sources */,
